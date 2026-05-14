@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Profile — Rifka Salsabila</title>
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            choco:      '#3B1F0E',
+            mocha:      '#5C3317',
+            terracotta: '#C4622D',
+            tan:        '#C8996A',
+            cream:      '#F5EBD8',
+            parchment:  '#EFE0C4',
+            sand:       '#D9C4A0',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="relative z-10">
+  
+
+  <!-- Background blobs -->
+  <div class="blob w-96 h-96 bg-terracotta top-[-60px] left-[-80px]"></div>
+  <div class="blob w-72 h-72 bg-tan bottom-32 right-[-60px]"></div>
+  <div class="blob w-56 h-56 bg-mocha top-1/2 left-1/3"></div>
+
+  <!--  HERO / HEADER  -->
+  <header class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
+    <div class="reveal flex flex-col items-center gap-6" style="transition-delay:0.1s">
+
+      <!-- Avatar with spinning ring -->
+      <div class="avatar-ring w-36 h-36 flex-shrink-0">
+        <div class="avatar-inner w-full h-full bg-parchment flex items-center justify-center">
+          <img
+            src="img/aku.jpeg"
+            alt="Foto Profil"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Name & tagline -->
+      <div>
+        <h1 class="font-display text-5xl md:text-6xl font-extrabold text-choco leading-tight">
+          Rifka Salsabila
+        </h1>
+        <p class="mt-2 text-tan font-body text-sm tracking-[0.22em] uppercase">
+          Software Engineer
+        </p>
+        <p class="mt-4 max-w-md text-mocha/70 text-base font-light leading-relaxed">
+          Mahasiswa yang sedang belajar mengeksplorasi dunia pengembangan web, dari logika backend sampai tampilan yang nyaman dipakai.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <a href="#contact" class="mt-2 inline-flex items-center gap-2 px-7 py-3 rounded-full bg-terracotta text-cream font-medium text-sm shadow-lg hover:bg-mocha transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <i class="fa-solid fa-paper-plane text-xs"></i> Let's Connect
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 inset-x-0 mx-auto w-fit flex flex-col items-center gap-1 text-tan/60 text-xs tracking-widest uppercase animate-bounce">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down text-xs"></i>
+    </div>
+  </header>
+
+  <!--  ABOUT ME -->
+  <section id="about" class="relative z-10 max-w-3xl mx-auto px-6 py-20">
+    <div class="divider reveal mb-10">About Me</div>
+
+    <div class="reveal glass rounded-3xl p-8 md:p-12" style="transition-delay:0.15s">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-choco mb-6">
+        Halo, saya <em class="text-terracotta not-italic">Rifka</em> 👋
+      </h2>
+      <div class="space-y-4 text-mocha/80 leading-relaxed font-light text-base">
+        <p>
+          Saya mahasiswa jurusan <strong class="font-medium text-terracotta">Teknologi Rekayasa Perangkat Lunak</strong> yang sedang belajar mendalami dunia pengembangan web. Buat saya belajar ngoding itu proses yang terus berjalan setiap error adalah pelajaran bagi saya dan setiap fitur yang berhasil adalah kepuasan tersendiri untuk saya.
+        </p>
+      </div>
+
+      <!-- Mini stats -->
+      <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+        <div class="rounded-2xl bg-terracotta/10 py-4 px-2">
+          <div class="font-display text-3xl font-bold text-terracotta">1,5+</div>
+          <div class="text-xs text-mocha/60 mt-1">Tahun Pengalaman</div>
+        </div>
+        <div class="rounded-2xl bg-terracotta/10 py-4 px-2">
+          <div class="font-display text-3xl font-bold text-terracotta">10+</div>
+          <div class="text-xs text-mocha/60 mt-1">Proyek Selesai</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  SKILLS  -->
+  <section id="skills" class="relative z-10 max-w-3xl mx-auto px-6 py-16">
+    <div class="divider reveal mb-10">Skills & Tools</div>
+
+    <div class="reveal glass rounded-3xl p-8 md:p-12" style="transition-delay:0.15s">
+      <p class="text-mocha/60 text-sm mb-8 text-center">Hover pada badge untuk melihat skill yang saya kuasai ✨</p>
+
+      <div class="space-y-6">
+        <!-- Frontend -->
+        <div>
+          <p class="text-xs uppercase tracking-widest text-tan mb-3 font-medium">Frontend</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-badge">🌊 Tailwind CSS</span>
+            <span class="skill-badge">🎨 Figma</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div>
+          <p class="text-xs uppercase tracking-widest text-tan mb-3 font-medium">Backend</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-badge">🔥 Laravel</span>
+            <span class="skill-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="skill-badge">🗄️ MySQL</span>
+          </div>
+        </div>
+
+        <!-- DevOps & Tools -->
+        <div>
+          <p class="text-xs uppercase tracking-widest text-tan mb-3 font-medium">DevOps & Tools</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section id="contact" class="relative z-10 max-w-3xl mx-auto px-6 py-16 pb-32">
+    <div class="divider reveal mb-10">Get In Touch</div>
+
+    <div class="reveal glass rounded-3xl p-8 md:p-12 text-center" style="transition-delay:0.15s">
+      <h2 class="font-display text-3xl font-bold text-choco mb-3">
+        Mari Berkolaborasi Jika Anda
+      </h2>
+      <p class="text-mocha/60 text-sm leading-relaxed max-w-sm mx-auto mb-8">
+        Punya ide proyek menarik? Sedang mencari developer untuk tim Anda? Atau sekadar ingin menyapa saja pintu saya selalu terbuka untuk kalian.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a href="https://github.com/RifkaSalsabila10" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:salsabilarifka5@gmail.com" class="social-link" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.instagram.com/rifksbl?igsh=Z2h2M2tzMnNydzhp" target="_blank" rel="noopener" class="social-link" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+          <a href="https://wa.me/message/VOYS4U3F27UMN1" target="_blank" rel="noopener" class="social-link" title="whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Email CTA -->
+      <div class="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-terracotta/10 border border-terracotta/25 text-terracotta text-sm font-medium">
+        <i class="fa-solid fa-at text-xs"></i>
+        salsabilarifka5@gmail.com
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="relative z-10 text-center text-tan/50 text-xs pb-6 -mt-10 font-light tracking-wide">
+    © 2026 Rifka Salsabila
+  </footer>
+
+  <!--  CHAT WIDGET  -->
+  <div id="chat-bubble" title="Chat dengan saya">
+    <i class="fa-solid fa-comment-dots" id="chat-icon"></i>
+  </div>
+
+  <div id="chat-panel" class="glass shadow-2xl shadow-choco/20">
+    <!-- Header -->
+    <div class="flex items-center gap-3 px-4 py-3 border-b border-tan/25" style="background:rgba(92,51,23,0.08)">
+      <div class="w-8 h-8 rounded-full bg-terracotta flex items-center justify-center text-cream text-xs font-bold flex-shrink-0">RS</div>
+      <div class="flex-1">
+        <div class="text-choco text-sm font-semibold">Rifka's Bot</div>
+        <div class="flex items-center gap-1.5 text-xs text-tan/70">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span> Online
+        </div>
+      </div>
+      <button id="chat-close" class="text-tan/60 hover:text-terracotta transition-colors text-sm">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chat-messages">
+      <div class="msg msg-bot">
+        Halo! 👋 Saya asisten Rifka. Ada yang bisa saya bantu? Coba tanya tentang <strong>skills</strong>, <strong>proyek</strong>, atau cara <strong>menghubungi</strong> Rifka.
+      </div>
+    </div>
+
+    <!-- Input row -->
+    <div id="chat-input-row" style="background:rgba(245,235,216,0.6)">
+      <input id="chat-input" type="text" placeholder="Ketik pesan..." autocomplete="off" />
+      <button id="chat-send">
+        <i class="fa-solid fa-paper-plane text-xs"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
